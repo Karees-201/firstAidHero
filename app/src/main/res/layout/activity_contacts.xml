@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="أرقام الطوارئ المعتمدة"
+            android:textColor="#C62828"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="الأرقام الرسمية السريعة:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#C62828"
+                android:layout_marginBottom="8dp" />
+
+            <!-- كرت أرقام الطوارئ العامة الثابتة -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="الهلال الأحمر / الإسعاف (110)"
+                            android:textColor="#111111"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnCallAmbulance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="اتصال"
+                            android:textSize="12sp"
+                            android:backgroundTint="#C62828"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="فوج الإطفاء (113)"
+                            android:textColor="#111111"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnCallFire"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="اتصال"
+                            android:textSize="12sp"
+                            android:backgroundTint="#C62828"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="الشرطة والنجدة (112)"
+                            android:textColor="#111111"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnCallPolice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="اتصال"
+                            android:textSize="12sp"
+                            android:backgroundTint="#C62828"
+                            app:cornerRadius="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="إضافة جهة اتصال طوارئ مخصصة:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#111111"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <EditText
+                        android:id="@+id/etContactName"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="اسم الشخص أو الطبيب (مثلاً: د. أحمد)"
+                        android:textColor="#111111"
+                        android:textColorHint="#888888"
+                        android:textSize="14sp"
+                        android:background="@android:drawable/editbox_background"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <EditText
+                        android:id="@+id/etContactPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="رقم الهاتف"
+                        android:inputType="phone"
+                        android:textColor="#111111"
+                        android:textColorHint="#888888"
+                        android:textSize="14sp"
+                        android:background="@android:drawable/editbox_background"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="14dp" />
+
+                    <Button
+                        android:id="@+id/btnAddContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="حفظ جهة الاتصال"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="#C62828"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="أرقامي المخصصة (اضغط للاتصال):"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#C62828"
+                android:layout_marginBottom="8dp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <ListView
+                    android:id="@+id/lvCustomContacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:divider="#F0F0F0"
+                    android:dividerHeight="1dp"
+                    android:padding="8dp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
